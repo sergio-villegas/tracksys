@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  viewCart: boolean = false;
+  
+  constructor() { }
 
+  clickShowLista(){
+    this.viewCart = !this.viewCart
+  }
 }

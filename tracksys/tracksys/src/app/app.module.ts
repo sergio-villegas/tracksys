@@ -9,13 +9,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 import { JWT_OPTIONS, JwtHelperService } from '@auth0/angular-jwt';
+import { CrearComponent } from './components/crear/crear.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    CrearComponent
   ],
   imports: [
     BrowserModule,
