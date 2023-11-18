@@ -1,5 +1,5 @@
 body {
-  background-color: #2196F3; /* Azul */
+  background-color: #3498db; /* Azul */
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,41 +9,37 @@ body {
 }
 
 .login-container {
-    background-color: rgb(234, 234, 234);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-    text-align: center;
-  }
-  
-  h1 {
-    color: #2196F3;
-    font-size: 84px;
-    margin-bottom: 20px;
-  }
-  
-  .form-label {
-    display: block;
-    font-weight: bold;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .btn-primary {
-    width: 100%;
-    padding: 10px;
-    background-color: #2196F3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0E81D1;
-  }
-  
-  .my-custom-bg {
-    background-color: #2086d9; /* Azul */
-    /* Otros estilos personalizados si los necesitas */
-  }
+  background-color: #ffffff; /* Blanco */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #3498db; /* Azul */
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 15px;
+  background-color: #3498db; /* Azul */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9; /* Azul más oscuro al pasar el ratón */
+}

@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 import { JWT_OPTIONS, JwtHelperService } from '@auth0/angular-jwt';
 import { CrearComponent } from './components/crear/crear.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
@@ -24,8 +27,10 @@ import { AdminComponent } from './components/admin/admin.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatSnackBarModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {provide: JWT_OPTIONS, useValue: JWT_OPTIONS},
@@ -34,3 +39,4 @@ import { AdminComponent } from './components/admin/admin.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
