@@ -92,25 +92,37 @@ function verifyToken(req,res, next){
 
 }
 
-/*
+//Apis funcionalidad de la pantalla home
+app.get('/tareas', (req, res) => {
+  const query = 'SELECT * FROM tareas'
+  conexion.query(query, (error, resultado) =>{
+    if(error) return console.error(error.message)
 
-singin
-const { userName, pass } = req.body;
-  conexion.query('select usuario,rol from usuarios where usuario=? and password=?',
-  [userName,pass],
-  (err,rows,fields) => {
-    if(!err){
-      if(rows.length >0){
-        let data = JSON.stringify(rows[0]);
-        const token = jwt.sign(data, 'villegas');
-        res.json({token});
-      }else{
-        res.json('Usuario o clave incorrectos');
-      }
-      
-    }else{
-      console.log(err);
+    if(resultado.length > 0){
+        res.json(resultado)
+
+    } else{
+        res.json('No hay registros')
     }
+  })
+})
+
+app.post('/tareas/agregar', (req, res) => {
+  const ticket = {
+    Descripcion: req.body.Descripcion,
+    Localizacion: req.body.Localizacion,
+    Fecha_Inicio: req.body.Fecha_Inicio,
+    Fecha_Finalizacion: req.body.Fecha_Finalizacion,
+    Estado: req.body.Estado,
+    Carga_Archivo: req.body.Carga_Archivo
   }
-  )
-*/
+  const query = 'INSERT INTO tareas SET ?'
+  conexion.query(query, ticket, (error, resultado) => {
+    if (error) {
+      console.error(error.message);
+      res.status(500).json({ mensaje: 'Error al crear ticket' });
+    } else {
+      res.status(201).json({ mensaje: 'Ticket creado con éxito' });
+    }
+  })
+})

@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 import { JWT_OPTIONS, JwtHelperService } from '@auth0/angular-jwt';
 import { CrearComponent } from './components/crear/crear.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CrearComponent } from './components/crear/crear.component';
     LoginComponent,
     HomeComponent,
     NavbarComponent,
-    CrearComponent
+    CrearComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
