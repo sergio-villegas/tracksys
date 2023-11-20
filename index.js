@@ -42,7 +42,7 @@ conexion.connect(error => {
 
 const jwt = require('jsonwebtoken');
 
-
+//APIS para el login
 app.get('/', (req,res)=>{
   conexion.query('select * from usuarios', (err,rows,fields) => {
     if(!err){
@@ -91,26 +91,34 @@ function verifyToken(req,res, next){
   }
 
 }
-
-/*
-
-singin
-const { userName, pass } = req.body;
-  conexion.query('select usuario,rol from usuarios where usuario=? and password=?',
-  [userName,pass],
-  (err,rows,fields) => {
-    if(!err){
-      if(rows.length >0){
-        let data = JSON.stringify(rows[0]);
-        const token = jwt.sign(data, 'villegas');
-        res.json({token});
-      }else{
-        res.json('Usuario o clave incorrectos');
-      }
-      
+//Apis para la interaccion con las pantallas de vista y creacion
+app.get('/tareas', (req, res) => {
+  const query = 'SELECT * FROM tareas'
+  conexion.query(query, (error, resultado) => {
+    if(resultado.length > 0){
+      res.json(resultado)
     }else{
-      console.log(err);
+      res.json('no hay registros')
     }
+  })
+})
+
+app.post('/tareas/crear', (req, res) => {
+  const ticket = {
+    descripcion: req.body.descripcion,
+    localizacion: req.body.localizacion,
+    fechaini: req.body.fechaini,
+    fechafin: req.body.fechafin,
+    estado: req.body.estado,
+    archivo: req.body.archivo
   }
-  )
-*/
+  const query = `INSERT INTO tareas SET ?`
+  conexion.query(query, ticket, (error, resultado) => {
+    if(error){
+      console.error(error.message);
+      res.status(500).json({ mensaje: 'Error al crear el ticket' });
+    } else{
+      res.status(201).json({ mensaje: 'ticket creado con exito' });
+    }
+  })
+})
