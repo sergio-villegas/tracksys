@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Data } from 'src/app/interfaces/data';
-import { HomeService } from 'src/app/services/home.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,12 +8,9 @@ import { HomeService } from 'src/app/services/home.service';
 export class NavbarComponent {
   viewCart: boolean = false;
   
-  constructor(
-    private homeService: HomeService
-  ) { }
+  constructor() { }
 
   clickShowLista(){
     this.viewCart = !this.viewCart
   }
-  
 }

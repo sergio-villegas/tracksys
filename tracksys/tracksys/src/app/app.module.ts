@@ -10,12 +10,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 import { JWT_OPTIONS, JwtHelperService } from '@auth0/angular-jwt';
 import { CrearComponent } from './components/crear/crear.component';
-<<<<<<< HEAD
-=======
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-
->>>>>>> 91e2fde4beda5ea1099370ba94457a0545d5599d
 import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
@@ -30,10 +24,8 @@ import { AdminComponent } from './components/admin/admin.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatSnackBarModule,
     FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule
+    HttpClientModule
   ],
   providers: [
     {provide: JWT_OPTIONS, useValue: JWT_OPTIONS},
@@ -42,4 +34,3 @@ import { AdminComponent } from './components/admin/admin.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
