@@ -91,6 +91,7 @@ function verifyToken(req,res, next){
   }
 
 }
+<<<<<<< HEAD
 //Apis para la interaccion con las pantallas de vista y creacion
 app.get('/tareas', (req, res) => {
   const query = 'SELECT * FROM tareas'
@@ -99,10 +100,25 @@ app.get('/tareas', (req, res) => {
       res.json(resultado)
     }else{
       res.json('no hay registros')
+=======
+
+//Apis funcionalidad de la pantalla home
+app.get('/tareas', (req, res) => {
+  const query = 'SELECT * FROM tareas'
+  conexion.query(query, (error, resultado) =>{
+    if(error) return console.error(error.message)
+
+    if(resultado.length > 0){
+        res.json(resultado)
+
+    } else{
+        res.json('No hay registros')
+>>>>>>> 91e2fde4beda5ea1099370ba94457a0545d5599d
     }
   })
 })
 
+<<<<<<< HEAD
 app.post('/tareas/crear', (req, res) => {
   const ticket = {
     descripcion: req.body.descripcion,
@@ -119,6 +135,24 @@ app.post('/tareas/crear', (req, res) => {
       res.status(500).json({ mensaje: 'Error al crear el ticket' });
     } else{
       res.status(201).json({ mensaje: 'ticket creado con exito' });
+=======
+app.post('/tareas/agregar', (req, res) => {
+  const ticket = {
+    Descripcion: req.body.Descripcion,
+    Localizacion: req.body.Localizacion,
+    Fecha_Inicio: req.body.Fecha_Inicio,
+    Fecha_Finalizacion: req.body.Fecha_Finalizacion,
+    Estado: req.body.Estado,
+    Carga_Archivo: req.body.Carga_Archivo
+  }
+  const query = 'INSERT INTO tareas SET ?'
+  conexion.query(query, ticket, (error, resultado) => {
+    if (error) {
+      console.error(error.message);
+      res.status(500).json({ mensaje: 'Error al crear ticket' });
+    } else {
+      res.status(201).json({ mensaje: 'Ticket creado con éxito' });
+>>>>>>> 91e2fde4beda5ea1099370ba94457a0545d5599d
     }
   })
 })

@@ -1,21 +1,39 @@
 <app-navbar></app-navbar>
 
 <div class="container">
+<<<<<<< HEAD
     <div class="row" >
         <div class="col-sm-12" *ngFor="let ticket of tickets">
             <div class="table table-striped" >
+=======
+    <div class="row">
+        <div class="col-sm-12" *ngFor="let ticket of tickets">
+            <div class="table table-striped">
+>>>>>>> 91e2fde4beda5ea1099370ba94457a0545d5599d
                 <thead>
                     <th class="col-sm-1">ID</th>
                     <th class="col-sm-2">Descripcion</th>
                     <th class="col-sm-2">Estado</th>
                 </thead>
                 <tbody>
+<<<<<<< HEAD
                     <td class="col-sm-1">{{ticket.id_tarea}}</td>
                     <td class="col-sm-2">{{ticket.descripcion}}</td>
                     <td class="col-sm-2">{{ticket.estado}}</td>
                     <button>Ver</button>
                     <button>Editar</button>
                 </tbody>
+=======
+                    <td class="col-sm-1">{{ticket.ID_tarea}}</td>
+                    <td class="col-sm-2">{{ticket.Descripcion}}</td>
+                    <td class="col-sm-2">{{ticket.Estado}}</td>
+
+                    <button class="borrar">Borrarr</button>
+                    <button class="editar">Editar</button>
+                    <button class="editar">Ver</button>
+                </tbody>
+                
+>>>>>>> 91e2fde4beda5ea1099370ba94457a0545d5599d
             </div>
         </div>
     </div>
