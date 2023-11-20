@@ -1,47 +1,20 @@
-<div class="row">
-    <div class="col-sm-12">
-      <form (ngSubmit)="crearTicket()" #usuarioForm="ngForm">
-        <fieldset class="form-group">
-          <div class="col-sm-12">
-            <span class="input-campo1">Descripcion</span>
-            <input type="text" class="input-descripcion" placeholder="Descripcion" [(ngModel)]="ticket.descripcion" name="descripcion">
-          </div>
-        </fieldset>
-        <fieldset class="form-group">
-          <div class="col-sm-12">
-            <span class="input-campo2">Localizacion</span>
-            <input type="text" class="input-localizacion" placeholder="Localizacion" [(ngModel)]="ticket.localizacion" name="localizacion">
-          </div>
-        </fieldset>
-        <fieldset class="form-group">
-            <div class="col-sm-12">
-                <span class="input-campo3">Fecha de inicio</span>
-                <input type="date" class="input-fechaini" [(ngModel)]="ticket.fechaini" name="fechaini">
-            </div>
-        </fieldset>
-        <fieldset class="form-group">
-            <div class="col-sm-12">
-                <span class="input-campo3">Fecha de fin</span>
-                <input type="date" class="input-fechafin" [(ngModel)]="ticket.fechafin" name="fechafin">
-            </div>
-        </fieldset>
-        <fieldset class="form-group">
-            <div class="col-sm-12">
-                <span class="input-campo3">Estado</span>
-                <input type="text" class="input-estado" placeholder="Estado" [(ngModel)]="ticket.estado" name="estado">
-            </div>
-        </fieldset>
-        <fieldset class="form-group">
-            <div class="col-sm-12">
-                <span class="input-campo3">Ubicacion archivo</span>
-                <input type="text" class="input-estado" placeholder="Ubicacion archivo" [(ngModel)]="ticket.archivo" name="archivo">
-            </div>
-        </fieldset>
-        <fieldset class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-primary" [disabled]="!usuarioForm.form.valid">Submit</button>
-          </div>
-        </fieldset>
-      </form>
-    </div>
+<div class="input">
+    <span class="input-campo1">campo1</span>
+    <input type="text" class="input-group-compo1" placeholder="campo1">
+</div>
+
+<div class="input">
+    <span class="input-campo2">campo2</span>
+    <input type="text" class="input-group-compo2" placeholder="campo2">
+</div>
+
+<div class="input"></div>
+<span class="input-campo3">campo3</span>
+<input type="text" class="input-group-compo3" placeholder="campo3">
+<div class="mb-3">
+    <label for="formFile" class="form-label">Default file input example</label>
+    <input class="form-control" type="file" id="formFile">
   </div>
+<div class="button">
+    <button>Agregar</button>
+</div>
