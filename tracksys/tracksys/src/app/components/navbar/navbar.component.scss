@@ -1,4 +1,4 @@
-.lista{
+/*.lista{
     display: none;
 }
 .show{
@@ -18,4 +18,98 @@
         justify-content: center;
         
     }
-}
+}*/
+
+.navbar {
+    background-color: rgb(48, 48, 106);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    h3 {
+      margin: 0;
+      font-size: 24px;
+    }
+  
+    .navbar-crear {
+      cursor: pointer;
+      font-size: 20px;
+  
+      &:hover {
+        color: darken(white, 10%);
+      }
+    }
+  }
+  
+  .lista {
+    display: none;
+  
+    &.show {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      position: absolute;
+      background-color: white;
+      border-radius: 0.5rem;
+      border: 1px solid darkblue;
+      right: 50%;
+      transform: translateX(50%);
+      min-width: 40%;
+  
+      app-crear {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+  
+        form {
+          width: 80%; // Ajusta el ancho del formulario 
+  
+          .input-campo1,
+          .input-campo2,
+          .input-campo3 {
+            display: inline-block;
+            text-align: left;
+            width: 40%; /* Ajusta el ancho  */
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 18px;
+            color: darkblue;
+          }
+  
+          .input-descripcion,
+          .input-localizacion,
+          .input-fechaini,
+          .input-fechafin,
+          .input-estado,
+          .input-archivo {
+            display: inline-block;
+            width: 60%; /* Ajusta el ancho */
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid darkblue;
+            border-radius: 4px;
+          }
+  
+          .btn-primary {
+            width: 100%;
+            padding: 12px;
+            background-color: rgb(54, 54, 132);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+  
+            &:hover {
+              background-color: darken(rgb(131, 131, 214), 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+  

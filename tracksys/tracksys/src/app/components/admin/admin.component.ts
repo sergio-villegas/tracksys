@@ -4,11 +4,11 @@ import { Ticket } from 'src/app/interfaces/ticket';
 import { HomeService } from 'src/app/services/home.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.scss']
 })
-export class HomeComponent {
+export class AdminComponent {
   tickets: Ticket[] = [];
 
   constructor(

@@ -1,0 +1,44 @@
+.col-sm-12 {
+    display: grid;
+    grid-template-columns:80% 60%; /* Ajusta el ancho de las columnas  */
+    gap: 16px; /* Ajusta el espacio entre las columnas */
+  }
+  
+  .input-campo1,
+  .input-campo2,
+  .input-campo3 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    color: darkblue;
+    margin-bottom: 8px;
+  }
+  
+  .input-descripcion,
+  .input-localizacion,
+  .input-fechaini,
+  .input-fechafin,
+  .input-estado,
+  .input-archivo {
+    width: calc(100% - 20px); /* El ancho total menos el padding */
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid darkblue;
+    border-radius: 4px;
+  }
+  
+  .btn-primary {
+    width: 60%; /* Ajusta el ancho del botón */
+    margin: 0 auto; 
+    padding: 12px;
+    background-color: rgb(54, 54, 132);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: darken(rgb(131, 131, 214), 10%);
+    }
+  }
+  

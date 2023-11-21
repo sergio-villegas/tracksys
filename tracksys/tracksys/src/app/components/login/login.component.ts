@@ -29,7 +29,8 @@ export class LoginComponent {
     this.loginService.singin(this.user).subscribe( (res:any) => {
       console.log(res);
       localStorage.setItem('token',res.token);
-      this.router.navigate(['home'])
+      
+      this.router.navigate(['admin'])
     })
   }
 }
