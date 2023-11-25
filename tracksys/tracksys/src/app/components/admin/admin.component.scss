@@ -1,9 +1,3 @@
-
-$color-azul-oscuro: #001f3f;
-$color-azul: #0074cc;
-$color-blanco: #ffffff;
-$color-negro: #000000;
-
 .container {
   margin-top: 20px;
 }
@@ -16,7 +10,7 @@ $color-negro: #000000;
   th, td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid $color-azul-oscuro;
+    border-bottom: 1px solid #000000;
 
     &:nth-child(1) {
       width: 10%;
@@ -30,18 +24,70 @@ $color-negro: #000000;
 
   tbody {
     button {
-      background-color: $color-azul;
-      color: $color-blanco;
-      padding: 8px 12px;
+      background-color: #015C91;
+      color: #ffffff;
+      padding: 13px 18px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      margin-right: 5px;
+      margin-right: 9px;
 
       &:hover {
-        background-color: darken($color-azul, 10%);
+        background-color: darken(#88cef6, 10%);
       }
     }
+  }
+}
+
+
+
+//logo2
+.logo-container {
+  display: flex;
+  justify-content: flex-end; // Alinea el logo a la derecha
+  margin-top: -800px; // Espacio superior, ajusta según sea necesario
+  margin-left: -60px;
+  margin-bottom: 230px;
+}
+
+.logo-img {
+  max-width: 100%; // Ajusta el tamaño máximo del logo según sea necesario
+  height: 100%; // Mantiene la proporción del logo
+}
+
+//logo1
+/*.logo-container {
+  display: flex;
+  justify-content: flex-end; // Alinea el logo a la derecha
+  margin-top: -547px; // Espacio superior, ajusta según sea necesario
+  margin-left: -60px;
+}
+
+.logo-img {
+  max-width: 55%; // Ajusta el tamaño máximo del logo según sea necesario
+  height: 30%; // Mantiene la proporción del logo
+}*/
+
+.info-container {
+  position: absolute;
+  bottom: 60px;
+  right: 125px;
+  width: 700px;  // Ajusta el ancho según sea necesario
+  
+}
+
+.info-box {
+  background-color: #ffffff;
+  border: 5px solid #2C82B5;
+  border-radius: 40px;
+  padding: 16px;
+  box-shadow: 0 20px 100px rgba(0, 0, 0, 0.1); /* Leve sombreado */
+  text-align: center;
+  height: 410px;  // Ajusta la altura según sea necesario
+
+  h4 {
+    margin-bottom: 10px;
+    font-size: 35px;
   }
 }
 

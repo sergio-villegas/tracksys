@@ -1,27 +1,5 @@
-/*.lista{
-    display: none;
-}
-.show{
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    z-index: 1;
-    position: absolute;
-    background-color: white;
-    border-radius: 0.5rem;
-    border:1px solid #cc1414;
-    right:0px;
-    min-width: 40%;
-    app-cart{
-        display: flex;
-        flex-direction:column;
-        justify-content: center;
-        
-    }
-}*/
-
 .navbar {
-    background-color: rgb(48, 48, 106);
+    background-color: #015C91;
     color: white;
     padding: 10px;
     display: flex;
@@ -38,7 +16,7 @@
       font-size: 20px;
   
       &:hover {
-        color: darken(white, 10%);
+        color: darken(#BCE5FF, 10%);
       }
     }
   }
@@ -53,9 +31,9 @@
       align-items: center;
       z-index: 1;
       position: absolute;
-      background-color: white;
+      background-color: #eef7fc;
       border-radius: 0.5rem;
-      border: 1px solid darkblue;
+      border: 1px solid #2C82B5;
       right: 50%;
       transform: translateX(50%);
       min-width: 40%;
@@ -78,7 +56,7 @@
             margin-bottom: 8px;
             font-weight: bold;
             font-size: 18px;
-            color: darkblue;
+            color: #2C82B5;
           }
   
           .input-descripcion,
