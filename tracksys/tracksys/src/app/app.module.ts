@@ -11,6 +11,9 @@ import { HttpClientModule } from '@angular/common/http'
 import { JWT_OPTIONS, JwtHelperService } from '@auth0/angular-jwt';
 import { CrearComponent } from './components/crear/crear.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { VerComponent } from './components/ver/ver.component';
+import { ActualizarComponent } from './components/actualizar/actualizar.component';
+import { UsuarioEditarComponent } from './components/usuario-editar/usuario-editar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { AdminComponent } from './components/admin/admin.component';
     HomeComponent,
     NavbarComponent,
     CrearComponent,
-    AdminComponent
+    AdminComponent,
+    VerComponent,
+    ActualizarComponent,
+    UsuarioEditarComponent
   ],
   imports: [
     BrowserModule,

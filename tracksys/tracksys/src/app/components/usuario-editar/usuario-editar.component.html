@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-sm-12">
+      <form (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="nombre">Descripcion</label>
+            <input type="text" class="form-control" required [(ngModel)]="ticket.descripcion"
+             name="descripcion" disabled>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="email">Localizacion</label>
+            <input type="text" class="form-control" required [(ngModel)]="ticket.localizacion" 
+            name="localizacion" disabled>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="email">Fecha de inicio</label>
+            <input type="date" class="form-control" required [(ngModel)]="ticket.fechaini" 
+            name="fechaini" disabled>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="email">Fecha de termino</label>
+            <input type="date" class="form-control" required [(ngModel)]="ticket.fechafin" name="fechafin">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="email">Estado</label>
+            <input type="text" class="form-control" required [(ngModel)]="ticket.estado" name="estado" disabled>
+              <select class="form-select" aria-label="Default select example" id="listaEstados" (change)="updateInputValue($event)">
+                <option selected>Estado de la tarea</option>
+                <option value="planeacion">planeacion</option>
+                <option value="proceso">proceso</option>
+                <option value="termino">termino</option>
+              </select>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="email">Link archivo</label>
+            <input type="text" class="form-control" required [(ngModel)]="ticket.archivo" name="archivo">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary" [disabled]="!usuarioForm.form.valid">Actualizar</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>

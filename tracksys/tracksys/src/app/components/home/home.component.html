@@ -11,8 +11,8 @@
                     <td class="col-sm-1">{{ticket.id_tarea}}</td>
                     <td class="col-sm-2">{{ticket.descripcion}}</td>
                     <td class="col-sm-2">{{ticket.estado}}</td>
-                    <button>Ver</button>
-                    <button>Editar</button>
+                    <button [routerLink]="['/ver', ticket.id_tarea]">Ver</button>
+                    <button [routerLink]="['/usuario-actualizar', ticket.id_tarea]">Editar</button>
                 </tbody>
             </div>
         </div>

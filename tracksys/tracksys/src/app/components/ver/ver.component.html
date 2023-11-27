@@ -1,0 +1,26 @@
+<div *ngIf="tickets">
+    <div class="id">
+      <label>ID:</label>
+      <span>{{id}}</span>
+    </div>
+    <div class="descripcion">
+      <label>Descripcion: </label>
+      <span>{{tickets.descripcion}}</span>
+    </div>
+    <div class="ticket-fechaini">
+      <label>Fecha de inicio</label>
+      <span>{{tickets.fechaini}}</span>
+    </div>
+    <div class="ticket-fechafin">
+      <label>Fecha de termino</label>
+      <span>{{tickets.fechafin}}</span>
+    </div>
+    <div class="estado">
+      <label>Estado:</label>
+      <span>{{tickets.estado}}</span>
+    </div>
+    <div class="tickets-archivo">
+      <label>Archivo</label>
+      <embed src="../../../assets/pdf/Alcancia.pdf" type="application/pdf" width="420px" height="630px">
+    </div>
+</div>

@@ -122,3 +122,36 @@ app.post('/tareas/crear', (req, res) => {
     }
   })
 })
+
+app.get('/tareas/ver/:id_tarea', (req, res) => {
+  const { id_tarea } = req.params
+
+  const query = `SELECT * FROM tareas WHERE id_tarea = ${id_tarea}`
+  conexion.query(query, (error, resultado) => {
+    if(error) return console.error(error.message)
+
+    if(resultado.length > 0){
+      res.json(resultado)
+    }else{
+      res.json('No hay ninguna tarea con ese ID')
+    }
+  })
+})
+
+app.put('/tareas/actualizar/:id', (req, res) => {
+  const { id } = req.params;
+  const { descripcion, localizacion, fechaini, fechafin, estado, archivo } = req.body;
+ //UPDATE tareas SET descripcion='Prueba1' WHERE id_tarea = 10
+  const query = `UPDATE tareas SET descripcion='${descripcion}', localizacion='${localizacion}',
+  fechaini='${fechaini}', fechafin='${fechafin}', estado='${estado}', archivo='${archivo}'
+  WHERE id_tarea='${id}'`;
+  
+  conexion.query(query, (error, resultado) => {
+    if(error){
+      console.error(error.message);
+      res.status(500).json({ mensaje: 'Error al actualizar el ticket' });
+    } else{
+      res.status(201).json({ mensaje: 'ticket actualziado con exito' });
+    }
+  })
+})

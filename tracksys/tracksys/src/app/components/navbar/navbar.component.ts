@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,9 +9,14 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
   viewCart: boolean = false;
   
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   clickShowLista(){
     this.viewCart = !this.viewCart
+  }
+  salir(){
+    this.router.navigate(['login'])
   }
 }

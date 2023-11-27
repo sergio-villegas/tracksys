@@ -17,4 +17,8 @@ export class HomeService {
     const response = this.httpClient.get<Ticket[]>(this.BASE_URL+'/tareas');
     return response;
   }
+  getIDTicket(id: string): Observable<Ticket[]>{
+    const response = this.httpClient.get<Ticket[]>(this.BASE_URL+`/tareas/ver/${id}`);
+    return response
+  }
 }
