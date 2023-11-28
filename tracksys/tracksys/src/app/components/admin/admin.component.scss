@@ -43,16 +43,15 @@
 
 //logo2
 .logo-container {
-  display: flex;
-  justify-content: flex-end; // Alinea el logo a la derecha
-  margin-top: -800px; // Espacio superior, ajusta según sea necesario
-  margin-left: -60px;
-  margin-bottom: 230px;
+  position: fixed;
+  top: 350px; // Espacio superior, ajusta según sea necesario
+  left: -200px;
+  right: 100px;
 }
 
 .logo-img {
-  max-width: 100%; // Ajusta el tamaño máximo del logo según sea necesario
-  height: 100%; // Mantiene la proporción del logo
+  max-width: 52%; // Ajusta el tamaño máximo del logo según sea necesario
+  height: 10%; // Mantiene la proporción del logo
 }
 
 //logo1
@@ -69,8 +68,8 @@
 }*/
 
 .info-container {
-  position: absolute;
-  bottom: 60px;
+  position: fixed;
+  bottom: 200px;
   right: 125px;
   width: 700px;  // Ajusta el ancho según sea necesario
   
@@ -81,7 +80,7 @@
   border: 5px solid #2C82B5;
   border-radius: 40px;
   padding: 16px;
-  box-shadow: 0 20px 100px rgba(0, 0, 0, 0.1); /* Leve sombreado */
+  box-shadow: 0 20px 500px rgba(0, 0, 0, 0.1); /* Leve sombreado */
   text-align: center;
   height: 410px;  // Ajusta la altura según sea necesario
 

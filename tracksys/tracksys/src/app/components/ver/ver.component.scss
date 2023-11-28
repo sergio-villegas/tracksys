@@ -1,0 +1,54 @@
+.ver-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px; /* Ajusta el margen superior según sea necesario */
+    
+    label {
+      font-weight: bold;
+      font-size: 18px;
+      color: #001449;
+      margin-bottom: 8px;
+    }
+  
+    .info {
+      background-color: #f0f8ff; /* Fondo azul muy claro, ajusta el color según tus preferencias */
+      width: 80%; /* Ajusta el ancho del contenedor de información según sea necesario */
+      padding: 15px;
+      border: 10px solid #2C82B5;
+      border-radius: 16px;
+      box-shadow: 0 20px 4000px rgba(0, 0, 0, 0.1); /* Leve sombreado */
+      margin-bottom: 20px;
+      
+      display: fixed;
+      flex-direction: row; /* Alinea los elementos en una fila */
+  
+      .text-info {
+        flex: 1; /* Ocupa todo el espacio disponible en la fila */
+        margin-right: 20px; /* Espacio entre la información de texto y el logo */
+  
+        span {
+          font-size: 16px;
+          color: #001449;
+        }
+  
+        embed {
+          width: 100%; /* Ajusta el ancho del objeto embed según sea necesario */
+          height: 600px; /* Ajusta la altura del objeto embed según sea necesario */
+        }
+      }
+  
+      .logo-container {
+        width: 200px; /* Ajusta el ancho máximo del logo según sea necesario */
+        margin-top: 100px;
+        
+        img {
+          width: 250%; /* Ajusta el ancho de la imagen del logo al 100% */
+          height: auto; /* Mantiene la proporción de la imagen */
+          margin-left: 480px;
+          margin-top: -1625px;
+        }
+      }
+    }
+  }
+  
