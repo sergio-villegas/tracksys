@@ -14,9 +14,17 @@ export class NavbarComponent {
   ) { }
 
   clickShowLista(){
-    this.viewCart = !this.viewCart
+    const currentRoute = this.router.url;
+
+    if (currentRoute !== '/home') {
+      this.viewCart = !this.viewCart;
+    }
   }
+
   salir(){
-    this.router.navigate(['login'])
+    this.router.navigate(['login']);
+  }
+  isHome(): boolean {
+    return this.router.url === '/home';
   }
 }

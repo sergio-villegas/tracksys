@@ -1,7 +1,9 @@
+<app-navbar></app-navbar>
+
 <div class="container">
-    <div class="row" >
+    <div class="row">
         <div class="col-sm-12" *ngFor="let ticket of tickets">
-            <div class="table table-striped" >
+            <div class="table table-striped">
                 <thead>
                     <th class="col-sm-1">ID</th>
                     <th class="col-sm-2">Descripcion</th>
@@ -11,9 +13,27 @@
                     <td class="col-sm-1">{{ticket.id_tarea}}</td>
                     <td class="col-sm-2">{{ticket.descripcion}}</td>
                     <td class="col-sm-2">{{ticket.estado}}</td>
-                    <button [routerLink]="['/ver', ticket.id_tarea]">Ver</button>
-                    <button [routerLink]="['/usuario-actualizar', ticket.id_tarea]">Editar</button>
+                    <div class="btn-container">
+                        <button [routerLink]="['/ver', ticket.id_tarea]" class="btn">Ver</button>
+                    </div>
                 </tbody>
+            </div>
+        </div>
+        <div class="col-sm-12 offset-sm-8 logo-container">
+            <img src="assets/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="info-container">
+            <div class="info-box">
+                <p></p>
+                <h4>INFORMACIÓN</h4>
+                <p></p>
+                <p>Esta pantalla te permite únicamente visualizar todas las tareas.
+                    En la barra de navegación TRACKSYS se puede cerrar la sesión.</p>
+                <b>Salir: </b>
+                <a>Al hacer clic sobre el botón "Salir" te redirige a la página de inicio de sesión.</a>
+                <p></p><p>Puedes hacer clic en los botones "Ver" para ver acciones específicas.</p>
+                <b>VER: </b>
+                <a>Al hacer clic sobre el botón "Ver" puedes desplegar los detalles de la tarea seleccionada.</a>
             </div>
         </div>
     </div>
